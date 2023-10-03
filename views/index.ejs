@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vonat TIPP</title>
+	<link href="https://cdn.jsdelivr.net/npm/halfmoon@2.0.0/css/halfmoon.min.css" rel="stylesheet" crossorigin="anonymous">
+	<link rel="stylesheet" href="/static/css/custom-bootstrap.css">
+</head>
+<body class="">
+
+	<div class="modal fade" id="tipp-modal" tabindex="-1" aria-labelledby="modal-title-1" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content" style="width: fit-content; padding-left: 25px; padding-right: 25px;">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="modal-title-1">Tippelés</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<h5>563421 - Tokaj IC</h5>
+					<table class="table-striped table table-bordered">
+						<tbody>
+							<tr>
+								<td scope="row">Indulás</td>
+								<td>12:34</td>
+							</tr>
+							<tr>
+								<td scope="row">Megállók száma</td>
+								<td>13</td>
+							</tr>
+							<tr>
+								<td scope="row">Menetidő</td>
+								<td>2 óra 15 perc</td>
+							</tr>
+							<tr>
+								<td scope="row">Megtett út</td>
+								<td>211 km</td>
+							</tr>
+						</tbody>
+					</table>
+					<form action="#" method="post">
+						<label for="delay" style="margin-bottom: 5px;">Késés:</label>
+						<div class="input-group mb-3" style="width: fit-content;">
+							<input type="number" class="form-control" style="text-align: end;" name="delay" id="delay" placeholder="Késés mennyisége" aria-label="Késés" aria-describedby="add-on-1">
+							<span class="input-group-text" id="add-on-1">perc</span>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
+					<button type="button" class="btn btn-primary">Tippelés</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<nav class="navbar navbar-expand-lg" style="background-color: var(--bs-content-bg); border-bottom: var(--bs-border-width) solid var(--bs-content-border-color);">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#">
+			<img src="https://cdn2.iconfinder.com/data/icons/pittogrammi/142/14-512.png" alt="" width="24" height="24" class="d-inline-block align-text-top">
+			Vonat Tipp
+		  </a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			  <li class="nav-item">
+					<a class="nav-link active" href="#">Főoldal</a>
+			  </li>
+			  <li class="nav-item">
+					<a class="nav-link" aria-current="page" href="#">Profilom</a>
+			  </li>
+			  <li class="nav-item">
+					<a class="nav-link" aria-current="page" href="#">Bolt</a>
+			  </li>
+			  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					  Ranglisták
+					</a>
+					<ul class="dropdown-menu mt-lg-2 rounded-top-0">
+					  <li><a class="dropdown-item" href="#">Városi</a></li>
+					  <li><a class="dropdown-item" href="#">Megyei</a></li>
+					  <li><a class="dropdown-item" href="#">Országos</a></li>
+					</ul>
+			  </li>
+				<li class="nav-item">
+					<span class="nav-link">Egyenleged: 15011 Ft</span>
+				</li>
+			</ul>
+			<form class="d-flex" style="margin-right: 10px;" role="search">
+			  <input class="form-control me-2" type="search" placeholder="Honnan" aria-label="Search">
+			  <input class="form-control me-2" type="search" placeholder="Hova" aria-label="Search">
+			  <button class="btn btn-primary w-fit" type="submit">Keresés</button>
+			</form>
+			<form class="d-flex" role="search">
+			  <button class="btn btn-danger w-fit" type="submit">Kijelentkezés</button>
+			</form>
+		  </div>
+		</div>
+	  </nav>
+
+	  <div class="container" style="max-width: min-content; text-align: center; vertical-align: middle;">
+			<h1 class="current_selection">Kiemelt vonatok</h1>
+			<table class="table table-striped align-middle">
+				<caption>Ez a táblázat holnap induló vonatokat tartalmaz!</caption>
+			  <thead>
+					<tr>
+						<th scope="col">Vonat neve</th>
+						<th scope="col">Vonat száma</th>
+						<th scope="col">Tervezett indulás</th>
+						<th scope="col">Megállók száma</th>
+						<th scope="col">Menetidő</th>
+						<th scope="col">Megtett út</th>
+						<th scope="col">Szorzó</th>
+						<th scope="col">Elvira elérés</th>
+						<th scope="col">Tippelés</th>
+					</tr>
+			  	</thead>
+			  	<tbody class="table-group-divider">
+					<tr>
+					  <th scope="row">Tokaj IC</th>
+					  <td>564312</td>
+					  <td>12:05</td>
+					  <td class="text-center">11</td>
+					  <td class="text-center">2 óra 5 perc</td>
+					  <td class="text-center">221 km</td>
+					  <td class="text-center">x1.5</td>
+					  <td class="text-center">🚆</td>
+					  <td class="text-center"><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tipp-modal">Tippelek</button></td>
+					</tr>
+					<tr>
+					  <th scope="row">Tokaj IC</th>
+					  <td>564312</td>
+					  <td>12:05</td>
+					  <td class="text-center">11</td>
+					  <td class="text-center">2 óra 5 perc</td>
+					  <td class="text-center">221 km</td>
+					  <td class="text-center">x1.5</td>
+					  <td class="text-center">🚆</td>
+					  <td class="text-center"><button class="btn btn-primary">Tippelek</button></td>
+					</tr>
+					<tr>
+					  <th scope="row">Tokaj IC</th>
+					  <td>564312</td>
+					  <td>12:05</td>
+					  <td class="text-center">11</td>
+					  <td class="text-center">2 óra 5 perc</td>
+					  <td class="text-center">221 km</td>
+					  <td class="text-center">x1.5</td>
+					  <td class="text-center">🚆</td>
+					  <td class="text-center"><button class="btn btn-primary">Tippelek</button></td>
+					</tr>
+					<tr>
+					  <th scope="row">Tokaj IC</th>
+					  <td>564312</td>
+					  <td>12:05</td>
+					  <td class="text-center">11</td>
+					  <td class="text-center">2 óra 5 perc</td>
+					  <td class="text-center">221 km</td>
+					  <td class="text-center">x1.5</td>
+					  <td class="text-center">🚆</td>
+					  <td class="text-center"><button class="btn btn-primary">Tippelek</button></td>
+					</tr>
+					<tr>
+					  <th scope="row">Tokaj IC</th>
+					  <td>564312</td>
+					  <td>12:05</td>
+					  <td class="text-center">11</td>
+					  <td class="text-center">2 óra 5 perc</td>
+					  <td class="text-center">221 km</td>
+					  <td class="text-center">x1.5</td>
+					  <td class="text-center">🚆</td>
+					  <td class="text-center">✔️</td>
+					</tr>
+			  </tbody>
+			</table>
+			<form action="" method="get">
+				<h2>Vonat keresése</h2>
+				<label for="from" class="form-label">Honnan?</label>
+				<input type="text" class="form-control" name="from" id="from" style="max-width: 300px; margin: auto;">
+				<label for="to" class="form-label">Hova?</label>
+				<input type="text" class="form-control" name="to" id="to" style="max-width: 300px; margin: auto;">
+				<h5>Vagy</h5><br>
+				<label for="id" class="form-label">Vonat azonosító</label><br>
+				<input type="text" class="form-control" name="id" id="id" style="max-width: 300px; margin: auto;"><br>
+				<button type="submit" class="btn btn-primary">Keresés</button>
+			</form>         
+	  </div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
