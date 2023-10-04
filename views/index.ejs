@@ -11,7 +11,7 @@
 
 	<div class="modal fade" id="tipp-modal" tabindex="-1" aria-labelledby="modal-title-1" aria-hidden="true">
 		<div class="modal-dialog">
-			<div class="modal-content" style="width: fit-content; padding-left: 25px; padding-right: 25px;">
+			<div class="modal-content" style="width: fit-content; padding-left: 25px; padding-right: 25px; margin: auto;">
 				<div class="modal-header">
 					<h1 class="modal-title fs-5" id="modal-title-1">Tippelés</h1>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -93,7 +93,7 @@
 			  <input class="form-control me-2" type="search" placeholder="Hova" aria-label="Search">
 			  <button class="btn btn-primary w-fit" type="submit">Keresés</button>
 			</form>
-			<form class="d-flex" role="search">
+			<form class="d-flex" role="search" style="margin-top: 10px;">
 			  <button class="btn btn-danger w-fit" type="submit">Kijelentkezés</button>
 			</form>
 		  </div>
@@ -102,79 +102,81 @@
 
 	  <div class="container" style="max-width: min-content; text-align: center; vertical-align: middle;">
 			<h1 class="current_selection">Kiemelt vonatok</h1>
-			<table class="table table-striped align-middle">
-				<caption>Ez a táblázat holnap induló vonatokat tartalmaz!</caption>
-			  <thead>
-					<tr>
-						<th scope="col">Vonat neve</th>
-						<th scope="col">Vonat száma</th>
-						<th scope="col">Tervezett indulás</th>
-						<th scope="col">Megállók száma</th>
-						<th scope="col">Menetidő</th>
-						<th scope="col">Megtett út</th>
-						<th scope="col">Szorzó</th>
-						<th scope="col">Elvira elérés</th>
-						<th scope="col">Tippelés</th>
-					</tr>
-			  	</thead>
-			  	<tbody class="table-group-divider">
-					<tr>
-					  <th scope="row">Tokaj IC</th>
-					  <td>564312</td>
-					  <td>12:05</td>
-					  <td class="text-center">11</td>
-					  <td class="text-center">2 óra 5 perc</td>
-					  <td class="text-center">221 km</td>
-					  <td class="text-center">x1.5</td>
-					  <td class="text-center">🚆</td>
-					  <td class="text-center"><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tipp-modal">Tippelek</button></td>
-					</tr>
-					<tr>
-					  <th scope="row">Tokaj IC</th>
-					  <td>564312</td>
-					  <td>12:05</td>
-					  <td class="text-center">11</td>
-					  <td class="text-center">2 óra 5 perc</td>
-					  <td class="text-center">221 km</td>
-					  <td class="text-center">x1.5</td>
-					  <td class="text-center">🚆</td>
-					  <td class="text-center"><button class="btn btn-primary">Tippelek</button></td>
-					</tr>
-					<tr>
-					  <th scope="row">Tokaj IC</th>
-					  <td>564312</td>
-					  <td>12:05</td>
-					  <td class="text-center">11</td>
-					  <td class="text-center">2 óra 5 perc</td>
-					  <td class="text-center">221 km</td>
-					  <td class="text-center">x1.5</td>
-					  <td class="text-center">🚆</td>
-					  <td class="text-center"><button class="btn btn-primary">Tippelek</button></td>
-					</tr>
-					<tr>
-					  <th scope="row">Tokaj IC</th>
-					  <td>564312</td>
-					  <td>12:05</td>
-					  <td class="text-center">11</td>
-					  <td class="text-center">2 óra 5 perc</td>
-					  <td class="text-center">221 km</td>
-					  <td class="text-center">x1.5</td>
-					  <td class="text-center">🚆</td>
-					  <td class="text-center"><button class="btn btn-primary">Tippelek</button></td>
-					</tr>
-					<tr>
-					  <th scope="row">Tokaj IC</th>
-					  <td>564312</td>
-					  <td>12:05</td>
-					  <td class="text-center">11</td>
-					  <td class="text-center">2 óra 5 perc</td>
-					  <td class="text-center">221 km</td>
-					  <td class="text-center">x1.5</td>
-					  <td class="text-center">🚆</td>
-					  <td class="text-center">✔️</td>
-					</tr>
-			  </tbody>
-			</table>
+			<div style="max-width: 95vw; overflow-x: auto;">
+				<table class="table table-striped align-middle">
+					<caption>Ez a táblázat holnap induló vonatokat tartalmaz!</caption>
+				  	<thead>
+						<tr>
+							<th scope="col">Vonat neve</th>
+							<th scope="col">Vonat száma</th>
+							<th scope="col">Tervezett indulás</th>
+							<th scope="col">Megállók száma</th>
+							<th scope="col">Menetidő</th>
+							<th scope="col">Megtett út</th>
+							<th scope="col">Szorzó</th>
+							<th scope="col">Elvira elérés</th>
+							<th scope="col">Tippelés</th>
+						</tr>
+					</thead>
+					<tbody class="table-group-divider">
+						<tr>
+						  	<th scope="row">Tokaj IC</th>
+						  	<td>564312</td>
+						  	<td>12:05</td>
+						  	<td class="text-center">11</td>
+						  	<td class="text-center">2 óra 5 perc</td>
+						  	<td class="text-center">221 km</td>
+						  	<td class="text-center">x1.5</td>
+						  	<td class="text-center">🚆</td>
+						  	<td class="text-center"><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tipp-modal">Tippelek</button></td>
+						</tr>
+						<tr>
+						  	<th scope="row">Tokaj IC</th>
+						  	<td>564312</td>
+						  	<td>12:05</td>
+						  	<td class="text-center">11</td>
+						  	<td class="text-center">2 óra 5 perc</td>
+						  	<td class="text-center">221 km</td>
+						  	<td class="text-center">x1.5</td>
+						  	<td class="text-center">🚆</td>
+						  	<td class="text-center"><button class="btn btn-primary">Tippelek</button></td>
+						</tr>
+						<tr>
+						  	<th scope="row">Tokaj IC</th>
+						  	<td>564312</td>
+						  	<td>12:05</td>
+						  	<td class="text-center">11</td>
+						  	<td class="text-center">2 óra 5 perc</td>
+						  	<td class="text-center">221 km</td>
+						  	<td class="text-center">x1.5</td>
+						  	<td class="text-center">🚆</td>
+						  	<td class="text-center"><button class="btn btn-primary">Tippelek</button></td>
+						</tr>
+						<tr>
+						  	<th scope="row">Tokaj IC</th>
+						  	<td>564312</td>
+						  	<td>12:05</td>
+						  	<td class="text-center">11</td>
+						  	<td class="text-center">2 óra 5 perc</td>
+						  	<td class="text-center">221 km</td>
+						  	<td class="text-center">x1.5</td>
+						  	<td class="text-center">🚆</td>
+						  	<td class="text-center"><button class="btn btn-primary">Tippelek</button></td>
+						</tr>
+						<tr>
+						  	<th scope="row">Tokaj IC</th>
+						  	<td>564312</td>
+						  	<td>12:05</td>
+						  	<td class="text-center">11</td>
+						  	<td class="text-center">2 óra 5 perc</td>
+						  	<td class="text-center">221 km</td>
+						  	<td class="text-center">x1.5</td>
+						  	<td class="text-center">🚆</td>
+						  	<td class="text-center">✔️</td>
+						</tr>
+				  </tbody>
+				</table>
+			</div>
 			<form action="" method="get">
 				<h2>Vonat keresése</h2>
 				<label for="from" class="form-label">Honnan?</label>
