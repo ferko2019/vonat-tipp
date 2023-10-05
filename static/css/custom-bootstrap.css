@@ -9,3 +9,13 @@ w-fit {
 .current_selection {
     margin-top: 50px;
 }
+
+.logoutbtn {
+    margin-top: 10px;
+}
+
+@media only screen and (min-width: 992px) {
+    .logoutbtn {
+        margin-top: 0px;
+    }    
+}
